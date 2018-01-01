@@ -114,17 +114,18 @@
       var compare_ul = document.getElementById("compare-div");
       compare_ul.style.display = "none";
       var trainee_ul = document.getElementById("EList_F");
-      for (var i = 0; i < sorted.length; i++) {
+      for (var j = 0; j < sorted.length; j++) {
+        var i = 27 - j - 1;
         if (i < 9) {
           var rank = document.createElement("span");
           rank.innerHTML = (i + 1) + "\t";
           rank.style.color = "#ff3333";
-          var names = sorted[i].getElementsByClassName("mix9-name");
+          var names = sorted[j].getElementsByClassName("mix9-name");
           Array.prototype.forEach.call(names, function (n) {
             n.innerHTML = rank.outerHTML + n.innerHTML;
           });
         }
-        trainee_ul.appendChild(sorted[i]);
+        trainee_ul.appendChild(sorted[j]);
       }
       var final_div = document.getElementById("final-div");
       final_div.style.display = "block";
