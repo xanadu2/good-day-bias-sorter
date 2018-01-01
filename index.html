@@ -116,9 +116,9 @@
       var trainee_ul = document.getElementById("EList_F");
       for (var j = 0; j < sorted.length; j++) {
         var i = 27 - j - 1;
-        if (i < 9) {
+        if (j < 9) {
           var rank = document.createElement("span");
-          rank.innerHTML = (i + 1) + "\t";
+          rank.innerHTML = (j + 1) + "\t";
           rank.style.color = "#ff3333";
           var names = sorted[i].getElementsByClassName("mix9-name");
           Array.prototype.forEach.call(names, function (n) {
