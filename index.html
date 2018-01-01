@@ -120,12 +120,12 @@
           var rank = document.createElement("span");
           rank.innerHTML = (i + 1) + "\t";
           rank.style.color = "#ff3333";
-          var names = sorted[j].getElementsByClassName("mix9-name");
+          var names = sorted[i].getElementsByClassName("mix9-name");
           Array.prototype.forEach.call(names, function (n) {
             n.innerHTML = rank.outerHTML + n.innerHTML;
           });
         }
-        trainee_ul.appendChild(sorted[j]);
+        trainee_ul.appendChild(sorted[i]);
       }
       var final_div = document.getElementById("final-div");
       final_div.style.display = "block";
